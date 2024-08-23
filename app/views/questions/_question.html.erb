@@ -1,5 +1,5 @@
 <div id="<%= dom_id(question) %>" class="question">
-  <%= turbo_stream_from dom_id(question) %>
+  <%= turbo_stream_from dom_id(question) %> <%# dom_id is a helper => "question_#{question.id}" %>
   <p class="user-question"><%= question.user_question %></p>
   <p class="ai-answer">
     <% if question.ai_answer.present? %>

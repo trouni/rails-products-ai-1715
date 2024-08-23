@@ -2,6 +2,10 @@
   <h1>Chat with us</h1>
   <div id="questions">
     <%= render @questions %>
+    <%# The line above does this: %>
+    <%# @questions.each do |question| %>
+      <%#= render 'questions/question', question: question %>
+      <%# end %>
+    </div>
+    <%= render "form", question: @question %>
   </div>
-  <%= render "form", question: @question %>
-</div>
